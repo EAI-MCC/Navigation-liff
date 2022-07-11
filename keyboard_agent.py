@@ -79,9 +79,9 @@ if __name__ == '__main__':
   human_wants_restart = False
   stop_requested = False
 
-  viewer = SimpleImageViewer()
-  viewer.imshow(env.observation)
-  viewer.window.on_key_press = key_press
+  # viewer = SimpleImageViewer()
+  # viewer.imshow(env.observation)
+  # viewer.window.on_key_press = key_press
 
   print("Use arrow keys to move the agent.")
   print("Press R to reset agent\'s location.")
