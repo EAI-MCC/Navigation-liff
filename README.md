@@ -1,6 +1,5 @@
 ## Target-driven Visual Navigation Model using Deep Reinforcement Learning
 
-![THOR scene samples](http://web.stanford.edu/~yukez/images/img/thor_examples.png "THOR scene samples")
 
 ## Introduction
 
@@ -11,7 +10,78 @@ This repocitory provides a Tensorflow implementation of the deep siamese actor-c
 [Yuke Zhu](http://web.stanford.edu/~yukez/), Roozbeh Mottaghi, Eric Kolve, Joseph J. Lim, Abhinav Gupta, Li Fei-Fei, and Ali Farhadi
 <br>
 [ICRA 2017, Singapore](http://www.icra2017.org/)
+## Environment
+It runs successfully on my machine.
+![run](.asset/run.jpg)
+![evaluation](.asset/evaluation.jpg)
+- Architecture: `x86_64`
+- Model Name: `Intel i7-8750H CPU @ 2.20GHz`
+- OS: `Ubuntu 2004`
+- software environment: `Conda 4.9.2`
+- device :`CPU only`
 
+use conda or py-venv
+
+Here is a conda package list 
+```bash
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                        main  
+_openmp_mutex             5.1                       1_gnu  
+_tflow_select             2.3.0                       mkl  
+absl-py                   0.15.0             pyhd3eb1b0_0  
+astor                     0.7.1                    py35_0  
+blas                      1.0                         mkl  
+ca-certificates           2022.4.26            h06a4308_0  
+certifi                   2020.6.20          pyhd3eb1b0_3  
+cycler                    0.10.0                   pypi_0    pypi
+decorator                 5.1.1                    pypi_0    pypi
+gast                      0.5.3              pyhd3eb1b0_0  
+grpcio                    1.12.1           py35hdbcaa40_0  
+h5py                      2.10.0                   pypi_0    pypi
+imageio                   2.0.1                    pypi_0    pypi
+intel-openmp              2022.0.1          h06a4308_3633  
+kiwisolver                1.1.0                    pypi_0    pypi
+libffi                    3.3                  he6710b0_2  
+libgcc-ng                 11.2.0               h1234567_1  
+libgfortran-ng            7.5.0               ha8ba4b0_17  
+libgfortran4              7.5.0               ha8ba4b0_17  
+libgomp                   11.2.0               h1234567_1  
+libprotobuf               3.6.0                hdbcaa40_0  
+libstdcxx-ng              11.2.0               h1234567_1  
+markdown                  2.6.11                   py35_0  
+matplotlib                3.0.3                    pypi_0    pypi
+mkl                       2022.0.1           h06a4308_117  
+ncurses                   6.3                  h5eee18b_3  
+networkx                  2.4                      pypi_0    pypi
+numpy                     1.18.5                   pypi_0    pypi
+openssl                   1.1.1p               h5eee18b_0  
+pillow                    7.2.0                    pypi_0    pypi
+pip                       10.0.1                   py35_0  
+protobuf                  3.6.0            py35hf484d3e_0  
+pyglet                    1.5.26                   pypi_0    pypi
+pyparsing                 2.4.7                    pypi_0    pypi
+python                    3.5.6                h12debd9_1  
+python-dateutil           2.8.2                    pypi_0    pypi
+pywavelets                1.1.1                    pypi_0    pypi
+readline                  8.1.2                h7f8727e_1  
+scikit-image              0.15.0                   pypi_0    pypi
+scipy                     1.4.1                    pypi_0    pypi
+setuptools                40.2.0                   py35_0  
+six                       1.16.0             pyhd3eb1b0_1  
+sqlite                    3.38.5               hc218d9a_0  
+tensorboard               1.10.0           py35hf484d3e_0  
+tensorflow                1.10.0          mkl_py35heddcb22_0  
+tensorflow-base           1.10.0          mkl_py35h3c3e929_0  
+termcolor                 1.1.0                    py35_1  
+tk                        8.6.12               h1ccaba5_0  
+werkzeug                  1.0.1              pyhd3eb1b0_0  
+wheel                     0.37.1             pyhd3eb1b0_0  
+xz                        5.2.5                h7f8727e_1  
+zlib                      1.2.12               h7f8727e_2  
+
+```
+`Note:`
+Package,**pyglet**, is `incompatible` with python3.5.I have not fixed it tentatively.
 ## Setup
 This code is implemented in [Tensorflow API r1.0](https://www.tensorflow.org/api_docs/). You can follow the [online instructions](https://www.tensorflow.org/install/) to install Tensorflow 1.0. Other dependencies ([h5py](http://www.h5py.org/), [numpy](http://www.numpy.org/), [scikit-image](http://scikit-image.org/), [pyglet](https://bitbucket.org/pyglet/pyglet/wiki/Home)) can be install by [pip](https://pypi.python.org/pypi/pip): ```pip install -r requirements.txt```. This code has been tested with Python 2.7 and 3.5.
 
