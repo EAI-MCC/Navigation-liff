@@ -10,3 +10,8 @@ unity/*
 visualization
 results
 .DS_Store
+train.log
+evaluation.log
+__pycache__/**
+evaluation.log
+checkpoints*

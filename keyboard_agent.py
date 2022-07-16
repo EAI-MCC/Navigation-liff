@@ -56,7 +56,7 @@ def rollout(env):
     # check quit command
     if stop_requested: break
 
-    viewer.imshow(env.observation)
+    # viewer.imshow(env.observation)
 
 if __name__ == '__main__':
 

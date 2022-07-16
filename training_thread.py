@@ -71,12 +71,21 @@ class A3CTrainingThread(object):
     self.episode_max_q = -np.inf
 
   def _local_var_name(self, var):
+    '''
+    'a/b/c/d' -> 'b/c/d'
+    '''
     return '/'.join(var.name.split('/')[1:])
 
   def _get_accum_grad_name(self, var):
+    '''
+    'a/b/c:d/e' -> 'b/c_d/e_accum_grad:0'
+    '''
     return self._local_var_name(var).replace(':','_') + '_accum_grad:0'
 
   def _anneal_learning_rate(self, global_time_step):
+    '''
+    linear decline lr
+    '''
     time_step_to_go = max(self.max_global_time_step - global_time_step, 0.0)
     learning_rate = self.initial_learning_rate * time_step_to_go / self.max_global_time_step
     return learning_rate

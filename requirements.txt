@@ -1,3 +1,4 @@
+imageio==2.0.1
 scikit-image
 h5py
 numpy>=1.10.4

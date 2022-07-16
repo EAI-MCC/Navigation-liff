@@ -14,7 +14,7 @@ ACTION_SIZE = 4 # action size
 INITIAL_ALPHA_LOG_RATE = 0.4226 # log_uniform interpolate rate for learning rate (around 7 * 10^-4)
 GAMMA = 0.99 # discount factor for rewards
 ENTROPY_BETA = 0.01 # entropy regurarlization constant
-MAX_TIME_STEP = 10.0 * 10**6 # 10 million frames
+MAX_TIME_STEP = 10.0 * 10**2 # 10 million frames
 GRAD_NORM_CLIP = 40.0 # gradient norm clipping
 USE_GPU = True # To use GPU, set True
 VERBOSE = True
@@ -32,4 +32,10 @@ TASK_LIST = {
   'bedroom_04'     : ['134', '264', '320', '384', '387'],
   'kitchen_02'     : ['90', '136', '157', '207', '329'],
   'living_room_08' : ['92', '135', '193', '228', '254']
+}
+TASK_LIST_EVA = {
+  'bathroom_01'    : ['26', '37', '43', '53', '69'],
+  'bedroom_01'     : ['134', '264', '320', '384', '387'],
+  'kitchen_01'     : ['90', '136', '157', '207', '329'],
+  'living_room_01' : ['92', '135', '193', '228', '254']  
 }

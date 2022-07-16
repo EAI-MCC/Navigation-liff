@@ -17,13 +17,13 @@ from constants import NUM_EVAL_EPISODES
 from constants import VERBOSE
 
 from constants import TASK_TYPE
-from constants import TASK_LIST
+from constants import TASK_LIST_EVA
 
 if __name__ == '__main__':
 
   device = "/cpu:0" # use CPU for display tool
   network_scope = TASK_TYPE
-  list_of_tasks = TASK_LIST
+  list_of_tasks = TASK_LIST_EVA
   scene_scopes = list_of_tasks.keys()
 
   global_network = ActorCriticFFNetwork(action_size=ACTION_SIZE,
@@ -92,8 +92,8 @@ if __name__ == '__main__':
       print('mean episode collision: %.2f' % np.mean(ep_collisions))
 
       scene_stats[scene_scope].extend(ep_lengths)
-      break
-    break
+    #   break
+    # break
 
 print('\nResults (average trajectory length):')
 for scene_scope in scene_stats:
