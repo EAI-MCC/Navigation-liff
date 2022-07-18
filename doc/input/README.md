@@ -12,6 +12,21 @@ HDF5 simplifies the file structure to include only two major types of object:
 - Datasets, which are typed multidimensional arrays
 - Groups, which are container structures that can hold datasets and other groups
 
+## view iamges 
+`use python`
+```bash
+pip install h5py
+```
+### view result
+`data/bathroom_02.h5`
+- graph
+- location
+- observation
+- resnet_feature
+- rotation
+- shortest_path_distance
+
+
 
 ## Reference
 [1] https://www.neonscience.org/resources/learning-hub/tutorials/about-hdf5 (detial)
