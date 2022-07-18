@@ -15,4 +15,4 @@ evaluation.log
 __pycache__/**
 evaluation.log
 checkpoints*
-pytorch/.ipynb_checkpoints/**
+.ipynb_checkpoints/**
