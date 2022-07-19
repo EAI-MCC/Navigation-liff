@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+
 
 from tensorflow.python.training import training_ops
 from tensorflow.python.training import slot_creator
-
+tf.disable_v2_behavior()
 class RMSPropApplier(object):
 
   def __init__(self,

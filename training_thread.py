@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 import random
 import time
@@ -14,7 +14,7 @@ from constants import GAMMA
 from constants import LOCAL_T_MAX
 from constants import ENTROPY_BETA
 from constants import VERBOSE
-
+tf.disable_v2_behavior()
 class A3CTrainingThread(object):
   def __init__(self,
                thread_index,

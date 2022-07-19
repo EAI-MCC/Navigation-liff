@@ -16,3 +16,4 @@ __pycache__/**
 evaluation.log
 checkpoints*
 .ipynb_checkpoints/**
+*.log

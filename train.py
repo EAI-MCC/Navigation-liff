@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import threading
 import numpy as np
 
@@ -28,12 +28,15 @@ from constants import GRAD_NORM_CLIP
 from constants import USE_GPU
 from constants import TASK_TYPE
 from constants import TASK_LIST
+from constants import autoTaskList
+tf.disable_v2_behavior()
 
 if __name__ == '__main__':
 
   device = "/gpu:0" if USE_GPU else "/cpu:0"
+  task_list_set = autoTaskList('/data1/xuwy/repository/Navliff/data/')
   network_scope = TASK_TYPE
-  list_of_tasks = TASK_LIST
+  list_of_tasks = task_list_set.tasklist
   scene_scopes = list_of_tasks.keys()
   global_t = 0
   stop_requested = False
@@ -82,8 +85,10 @@ if __name__ == '__main__':
     training_threads.append(training_thread)
 
   # prepare session
-  sess = tf.Session(config=tf.ConfigProto(log_device_placement=False,
-                                          allow_soft_placement=True))
+  config=tf.ConfigProto(log_device_placement=False,
+                                          allow_soft_placement=True)
+  config.gpu_options.allow_growth=True
+  sess = tf.Session(config = config)
 
   init = tf.global_variables_initializer()
   sess.run(init)

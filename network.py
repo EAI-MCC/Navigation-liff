@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
-
+tf.disable_v2_behavior()
 # Actor-Critic Network Base Class
 # The policy network and value network architecture
 # should be implemented in a child class of this one

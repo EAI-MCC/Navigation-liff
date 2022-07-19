@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 import random
 import sys
@@ -17,13 +17,14 @@ from constants import NUM_EVAL_EPISODES
 from constants import VERBOSE
 
 from constants import TASK_TYPE
-from constants import TASK_LIST_EVA
-
+from constants import autoTaskList
+tf.disable_v2_behavior()
 if __name__ == '__main__':
 
   device = "/cpu:0" # use CPU for display tool
   network_scope = TASK_TYPE
-  list_of_tasks = TASK_LIST_EVA
+  task_list_set = autoTaskList('/data1/xuwy/repository/Navliff/data/')
+  list_of_tasks = task_list_set.tasklisteva
   scene_scopes = list_of_tasks.keys()
 
   global_network = ActorCriticFFNetwork(action_size=ACTION_SIZE,
