@@ -18,70 +18,93 @@ It runs successfully on my machine.
 - Model Name: `Intel i7-8750H CPU @ 2.20GHz`
 - OS: `Ubuntu 2004`
 - software environment: `Conda 4.9.2`
-- device :`CPU only`
+- device :`single GPU - RTX 3090`
 
 use conda or py-venv
 
 Here is a conda package list 
+
+`python 3.10` + `tensorflow 2.9.1`
+
 ```bash
 # Name                    Version                   Build  Channel
-_libgcc_mutex             0.1                        main  
-_openmp_mutex             5.1                       1_gnu  
-_tflow_select             2.3.0                       mkl  
-absl-py                   0.15.0             pyhd3eb1b0_0  
-astor                     0.7.1                    py35_0  
-blas                      1.0                         mkl  
+_libgcc_mutex             0.1                 conda_forge    conda-forge
+_openmp_mutex             4.5                       2_gnu    conda-forge
+absl-py                   1.1.0                    pypi_0    pypi
+astunparse                1.6.3                    pypi_0    pypi
+bzip2                     1.0.8                h7b6447c_0  
 ca-certificates           2022.4.26            h06a4308_0  
-certifi                   2020.6.20          pyhd3eb1b0_3  
-cycler                    0.10.0                   pypi_0    pypi
-decorator                 5.1.1                    pypi_0    pypi
-gast                      0.5.3              pyhd3eb1b0_0  
-grpcio                    1.12.1           py35hdbcaa40_0  
-h5py                      2.10.0                   pypi_0    pypi
-imageio                   2.0.1                    pypi_0    pypi
-intel-openmp              2022.0.1          h06a4308_3633  
-kiwisolver                1.1.0                    pypi_0    pypi
+cachetools                5.2.0                    pypi_0    pypi
+certifi                   2022.6.15                pypi_0    pypi
+charset-normalizer        2.1.0                    pypi_0    pypi
+cudatoolkit               11.3.1               h2bc3f7f_2  
+cudnn                     8.4.1.50             hed8a83a_0    conda-forge
+flatbuffers               1.12                     pypi_0    pypi
+gast                      0.4.0                    pypi_0    pypi
+google-auth               2.9.1                    pypi_0    pypi
+google-auth-oauthlib      0.4.6                    pypi_0    pypi
+google-pasta              0.2.0                    pypi_0    pypi
+grpcio                    1.47.0                   pypi_0    pypi
+h5py                      3.7.0                    pypi_0    pypi
+idna                      3.3                      pypi_0    pypi
+imageio                   2.19.5                   pypi_0    pypi
+keras                     2.9.0                    pypi_0    pypi
+keras-preprocessing       1.1.2                    pypi_0    pypi
+ld_impl_linux-64          2.38                 h1181459_1  
+libclang                  14.0.1                   pypi_0    pypi
 libffi                    3.3                  he6710b0_2  
-libgcc-ng                 11.2.0               h1234567_1  
-libgfortran-ng            7.5.0               ha8ba4b0_17  
-libgfortran4              7.5.0               ha8ba4b0_17  
-libgomp                   11.2.0               h1234567_1  
-libprotobuf               3.6.0                hdbcaa40_0  
-libstdcxx-ng              11.2.0               h1234567_1  
-markdown                  2.6.11                   py35_0  
-matplotlib                3.0.3                    pypi_0    pypi
-mkl                       2022.0.1           h06a4308_117  
+libgcc-ng                 12.1.0              h8d9b700_16    conda-forge
+libgomp                   12.1.0              h8d9b700_16    conda-forge
+libstdcxx-ng              12.1.0              ha89aaad_16    conda-forge
+libuuid                   1.0.3                h7f8727e_2  
+libzlib                   1.2.12               h166bdaf_2    conda-forge
+markdown                  3.4.1                    pypi_0    pypi
 ncurses                   6.3                  h5eee18b_3  
-networkx                  2.4                      pypi_0    pypi
-numpy                     1.18.5                   pypi_0    pypi
-openssl                   1.1.1p               h5eee18b_0  
-pillow                    7.2.0                    pypi_0    pypi
-pip                       10.0.1                   py35_0  
-protobuf                  3.6.0            py35hf484d3e_0  
-pyglet                    1.5.26                   pypi_0    pypi
-pyparsing                 2.4.7                    pypi_0    pypi
-python                    3.5.6                h12debd9_1  
-python-dateutil           2.8.2                    pypi_0    pypi
-pywavelets                1.1.1                    pypi_0    pypi
+networkx                  2.8.4                    pypi_0    pypi
+numpy                     1.23.1                   pypi_0    pypi
+oauthlib                  3.2.0                    pypi_0    pypi
+openssl                   1.1.1q               h7f8727e_0  
+opt-einsum                3.3.0                    pypi_0    pypi
+packaging                 21.3                     pypi_0    pypi
+pillow                    9.2.0                    pypi_0    pypi
+pip                       22.1.2                   pypi_0    pypi
+protobuf                  3.19.4                   pypi_0    pypi
+pyasn1                    0.4.8                    pypi_0    pypi
+pyasn1-modules            0.2.8                    pypi_0    pypi
+pyparsing                 3.0.9                    pypi_0    pypi
+python                    3.10.4               h12debd9_0  
+pywavelets                1.3.0                    pypi_0    pypi
 readline                  8.1.2                h7f8727e_1  
-scikit-image              0.15.0                   pypi_0    pypi
-scipy                     1.4.1                    pypi_0    pypi
-setuptools                40.2.0                   py35_0  
-six                       1.16.0             pyhd3eb1b0_1  
+requests                  2.28.1                   pypi_0    pypi
+requests-oauthlib         1.3.1                    pypi_0    pypi
+rsa                       4.8                      pypi_0    pypi
+scikit-image              0.19.3                   pypi_0    pypi
+scipy                     1.8.1                    pypi_0    pypi
+setuptools                61.2.0                   pypi_0    pypi
+six                       1.16.0                   pypi_0    pypi
 sqlite                    3.38.5               hc218d9a_0  
-tensorboard               1.10.0           py35hf484d3e_0  
-tensorflow                1.10.0          mkl_py35heddcb22_0  
-tensorflow-base           1.10.0          mkl_py35h3c3e929_0  
-termcolor                 1.1.0                    py35_1  
+tensorboard               2.9.1                    pypi_0    pypi
+tensorboard-data-server   0.6.1                    pypi_0    pypi
+tensorboard-plugin-wit    1.8.1                    pypi_0    pypi
+tensorflow                2.9.1                    pypi_0    pypi
+tensorflow-estimator      2.9.0                    pypi_0    pypi
+tensorflow-io-gcs-filesystem 0.26.0                   pypi_0    pypi
+termcolor                 1.1.0                    pypi_0    pypi
+tifffile                  2022.5.4                 pypi_0    pypi
 tk                        8.6.12               h1ccaba5_0  
-werkzeug                  1.0.1              pyhd3eb1b0_0  
+typing-extensions         4.3.0                    pypi_0    pypi
+tzdata                    2022a                hda174b7_0  
+urllib3                   1.26.10                  pypi_0    pypi
+werkzeug                  2.1.2                    pypi_0    pypi
 wheel                     0.37.1             pyhd3eb1b0_0  
+wrapt                     1.14.1                   pypi_0    pypi
 xz                        5.2.5                h7f8727e_1  
-zlib                      1.2.12               h7f8727e_2  
-
+zlib                      1.2.12               h7f8727e_2
 ```
+
 `Note:`
-Package,**pyglet**, is `incompatible` with python3.5.I have not fixed it tentatively.
+**if you want to run it on your own machine,you should modify path/to/dataset on `train.py` line 37 and `evaluate.py` line 26.**
+
 ## Setup
 This code is implemented in [Tensorflow API r1.0](https://www.tensorflow.org/api_docs/). You can follow the [online instructions](https://www.tensorflow.org/install/) to install Tensorflow 1.0. Other dependencies ([h5py](http://www.h5py.org/), [numpy](http://www.numpy.org/), [scikit-image](http://scikit-image.org/), [pyglet](https://bitbucket.org/pyglet/pyglet/wiki/Home)) can be install by [pip](https://pypi.python.org/pypi/pip): ```pip install -r requirements.txt```. This code has been tested with Python 2.7 and 3.5.
 
